@@ -1,0 +1,59 @@
+@import 'mixins'
+
+header
+	position: fixed
+	height: 3.7em
+	width: 100%
+	background-color: #000
+
+.menu-icon
+	width: 2em
+	height: 2em
+	position: absolute
+	top: 2em
+	left: auto
+	right: 2em
+	bottom: auto
+	cursor: pointer
+	z-index: 3
+	span
+		display: block
+		width: 100%
+		height: 0.3em
+		background: #fff
+		margin: 0 0 0.3em 0
+		position: absolute
+		&:first-child
+			top:0
+			left:0
+		&:nth-child(2)
+			top: 0.6em
+			left: 0
+		&:last-child
+			top: 1.25em
+			left:0			
+#menu-fullscreen
+	height: 100%
+	background: rgba(black, .91)
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	z-index: 9999
+	display: none
+
+.menu-fullscreen-list
+	margin: 30% auto
+	text-align: center
+	padding: 0
+	line-height: 9rem
+
+	.menu-fullscreen-item
+		color: #fff
+		font-family: sans-serif
+		font-weight: bold
+		font-size: 5rem
+	
+
+

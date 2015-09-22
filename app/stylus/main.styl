@@ -1,48 +1,48 @@
-@import 'normalize'
-@import 'helper'
+@import 'variables'
+@import 'mixins'
+@import 'header'
+@import 'grid'
+@import 'logo'
+@import 'content'
+@import 'home'
 
-/* variables */
-$lightgrey = #999
-$linkColor = #555
-$grey = #eee
-$black = #222
-$white = #f7f7f7
+
 
 html
-button
-input
-select
-textarea 
-  color: $black
+  box-sizing: border-box
+  font-size: $font-size-base
+  @media $md-and-up
+    font-size: $font-size-base-md-up
+
+body
+  margin: 0
+  color: #fff
+  font-family: $font-family-body
+  font-size: $font-size-body
+  font-weight: $font-weight-body
+  line-height: $line-height-body
+  background-color: #000
+
+
+  
+h1, h2, h3
+  color: #fff
+  font-family: $font-family-body
+  line-height: $line-height-heading
+
+p 
+  margin: 0 0 0.5em;
 
 a
-a:visited
-  color: $linkColor
+  color: $color-link
   text-decoration: none
+  &:hover, &:focus
+    color: $color-link-hover  
 
-a:hover
-  color: lighten($linkColor,10%)
+
   
-body
-  color: $black
-  font-size: 1em
-  line-height: 1.5
-  
-header
-  background: $grey
-  color:$black
-  padding: 1em
-  
-  nav
-    float:right
-    user-select:none
-    
-  .nav-item
-    float:left
-    margin-left:.5em
-    
-    a.active
-      text-decoration:underline
-    
-.content
-  padding: 1em
+
+
+
+
+        

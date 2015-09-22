@@ -1,40 +1,38 @@
 import React from 'react';
-import ItemList from '../components/itemList.jsx';
-import ItemStore from '../stores/itemStore';
-import ItemActions from '../actions/itemActions';
+import ReactFireMixin from 'reactfire';
+import Firebase from 'firebase';
+import ArticleList from '../components/articleList.jsx';
 
-class Home extends React.Component {
-  
-  constructor(props){
-    super(props);
-    this.state = {
-      items : [],
-      loading: false
-    };
-  }
 
-  componentDidMount() {
-    this.unsubscribe = ItemStore.listen(this.onStatusChange.bind(this));
-    ItemActions.loadItems();
-  }
 
-  componentWillUnmount() {
-    this.unsubscribe();
-  }
-
-  onStatusChange(state) {
-    this.setState(state);
-  }
-
-  render() {
-
+var Home = React.createClass({
+	mixins: [ReactFireMixin],
+	getInitialState: function(){
+		return {articles: [], article: ''};
+	},
+	componentWillMount: function(){
+		var ref = new Firebase('https://react-fireblog.firebaseio.com/articles');
+		this.bindAsArray(ref, 'articles');
+    //console.log(this.firebaseRefs.articles);
+	},
+	render: function(){
+		
     return (
-      <div>
-        <h1>Home Area</h1>
-        <ItemList { ...this.state } />
-      </div>
-    );
-  }
-}
+		<div id="homeContainer">
+			<div className='introContainer'>
+				<div className='intro'>
+					
+					<p>I’ll stop wearing black</p>
+					<p>when they make a darker color</p>
+					
+
+				</div>
+			</div>
+			<div>
+	      		<ArticleList articles={this.state.articles}/>
+	      	</div>
+		</div>
+	)}
+})
 
 export default Home;

@@ -1,0 +1,24 @@
+md-and-up()
+	@media screen and (min-width: $md-screen-width)
+		{block}
+
+md-only()
+	@media screen and (min-width: $md-screen-width) and (max-width: $lg-screen-width - 0.01em)
+		{block}	
+
+lg-and-up()
+	@media screen and (min-width: $lg-screen-width)
+		{block}
+
+below-lg()
+	@media screen and (max-width: $lg-screen-width - 0.01em)
+		{block}		
+
+clearfix()
+	zoom: 1
+	&:after
+	&:before
+		content: ""
+		display: table
+	&:after
+		clear: both						

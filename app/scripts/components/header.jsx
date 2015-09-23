@@ -90,9 +90,6 @@ var Header = React.createClass({
           <span></span>
         </div>
       </header>
-      <div className='logo'>
-          
-      </div>
     {/*put fullscreen menu out of header block to solve the problem of cannot cover grids*/}
       <div id="menu-fullscreen">
           <div className="menu-fullscreen-list">

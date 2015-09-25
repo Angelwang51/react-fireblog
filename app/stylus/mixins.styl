@@ -1,3 +1,7 @@
+xs-only()
+	@media screen and (min-width: $xs-screen-width) and (max-width: $md-screen-width - 0.01em)
+		{block}	
+
 md-and-up()
 	@media screen and (min-width: $md-screen-width)
 		{block}
@@ -13,6 +17,9 @@ lg-and-up()
 below-lg()
 	@media screen and (max-width: $lg-screen-width - 0.01em)
 		{block}		
+below-breakpoint()
+	@media screen and (max-width: $breakpoint - 0.01em)
+		{block}	
 
 clearfix()
 	zoom: 1

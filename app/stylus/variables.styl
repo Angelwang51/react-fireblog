@@ -1,8 +1,11 @@
 //media queries
-$xs-screen-width = 26.8em
+$xs-screen-width = 27.8em
 $md-screen-width = 46.8em
-$lg-screen-width = 70em
+$lg-screen-width = 92em
 $xl-screen-width = 135em
+$breakpoint = 102.7em
+
+$xs-only = 'screen and (min-width:' + $xs-screen-width + ') and (max-width:' + $md-screen-width + ')'
 
 $md-and-up = 'screen and (min-width:' + $md-screen-width + ')'
 
@@ -11,6 +14,8 @@ $md-only = 'screen and (min-width:' + $md-screen-width + ') and (max-width:' + $
 $lg-and-up = 'screen and (min-width:' + $lg-screen-width + ')'
 
 $below-lg = 'screen and (max-width:' + $lg-screen-width +')'
+
+$below-breakpoint = 'screen and (max-width:' + $breakpoint +')'
 
 
 $font-size-base = 14px

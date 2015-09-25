@@ -1,4 +1,11 @@
-#homeContainer
+#FixedHeaderContainer
+  height: 100%
+  width: 100%
+  
+.fixed-bg
+  
+  height:100%
+  width:100%
   background-color: #000
   @media $md-and-up
     background-image: url(../images/bg5.jpg)
@@ -7,19 +14,40 @@
     background-position: center center 
     background-attachment: fixed
 
+
 .introContainer
   box-sizing: border-box
-  margin: 0 2.5em 0 auto
+  margin: 0 auto
+  width: 80%
+  //padding: 55% 15% 10% 10%
   font-family: sans-serif
   font-weight: bold
   font-size: 2.5rem
-  line-height: 1
+  line-height: 0.9
   color: #fff
-  @media $md-and-up
+  background: rgba(black, .6)
+
+  @media $xs-only
+    width: 60%
+    padding: 8em 0 0 5%
+
+  @media $md-only
+    font-size: 5rem
+    width: 6em
+    margin: 0 auto
+    padding: 4.5em 0
+    height: 12em
+  @media $lg-and-up
+    margin: 0 12% 0 auto
     padding: 1em 0
-    font-size: 6rem
-    background: rgba(black, .9)
-    width: 35%
-    height: 60em
-      
-    
+    font-size: 6.9rem
+    width: 5em
+    height: 10em
+ 
+.scrolling-bg
+  margin: 0
+  min-height: 100%
+  background-color: black
+  padding: 2em 0 0 0
+  @media $md-and-up
+    padding: 10em 0 0 0
